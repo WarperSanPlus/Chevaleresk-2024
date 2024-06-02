@@ -1,0 +1,77 @@
+#quest-container{
+    display: block;
+    background-color: var(--main);
+    border-radius: 15px;
+    height: min-content;
+    padding: 3%;
+    margin: 3%;
+    border: solid var(--dark) 5px
+}
+
+.quest-title{
+    text-align: center;
+}
+
+.quest-difficulty{
+    text-align: center;
+}
+
+.quest-question{
+    background-color: var(--light);
+    border: solid black 2px;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.quest-answers{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.answer-button{
+    background-color: var(--light);
+    border: solid var(--dark) 3px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    height: min-content;
+    min-width: 100px;
+    padding: 1em 0em;
+}
+
+.receive-quest-buttons{
+    width: 90%;
+    margin: 0em auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.receive-quest-button{
+    background-color: var(--light);
+    border: solid var(--dark) 3px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 0.5em 1em;
+    padding: 1em 0.5em;
+}
+.result-msg{
+    font-weight: bold;
+    color: var(--dark);
+    text-align: center;
+}
+.alchemy-icon-quest{
+    height: 1.5em;
+    fill: lightgreen;
+}
+
+@media (max-width: 700px) {
+    .receive-quest-button{
+        width: 90%;
+    }
+    .receive-quest-buttons{
+        display: inline;
+    }
+}

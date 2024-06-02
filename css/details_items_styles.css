@@ -1,0 +1,264 @@
+/* CONTAINER */
+#details-container {
+    width: 90%;
+
+    margin: auto;
+    padding: 1.5em;
+
+    background-color: var(--main);
+
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+
+    color: var(--light);
+
+    margin-top: 1.5em;
+
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-areas:
+        'image name'
+        'image details'
+        'description description';
+    grid-template-columns: min-content 1fr;
+}
+
+#details-image,
+#details-type,
+#details-title,
+#details-description {
+    display: flex;
+    padding: 1em;
+    background-color: var(--second);
+    border-radius: 1.5em;
+    border: 0.1em solid var(--dark);
+}
+
+/* DETAILS */
+#details-image {
+    max-height: 15em;
+    max-width: 15em;
+
+    grid-area: image;
+}
+
+/* MAIN DETAILS */
+#details-details {
+    flex: 1;
+}
+
+#details-details>div {
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+
+    background-color: var(--second);
+
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+}
+
+/* TITLE */
+#details-title {
+    display: flex;
+
+    align-items: center;
+
+    grid-area: name;
+}
+
+/* NAME */
+#details-name {
+    flex: 1;
+
+    font-size: 1.5em;
+
+    margin-bottom: 0;
+    margin-left: 0.5em;
+}
+
+/* TYPE */
+#details-type {
+    grid-area: details;
+    background-color: var(--second);
+    flex-direction: column;
+}
+
+#details-type-icon {
+    height: 2em;
+    width: 2em;
+
+    background-color: var(--main);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/* DESCRIPTION */
+#details-description {
+    grid-area: description;
+}
+
+/* CART */
+#details-cart {
+    position: fixed;
+    top: 5em;
+    right: 0.5em;
+
+    padding: 1em;
+
+    font-size: large;
+    background-color: var(--main);
+
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+
+    opacity: 0.1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+#details-cart:hover,
+#details-cart:has(*:focus) {
+    opacity: 1 !important;
+}
+
+.details-fixed-cart {
+    opacity: 1 !important;
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+    margin: 1em auto;
+    width: 90%;
+}
+
+#details-cart-collapse {
+    position: absolute;
+
+    top: 0.3em;
+    right: 0.3em;
+
+    cursor: pointer;
+
+    width: 100%;
+    text-align: right;
+}
+
+.details-cart-text {
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.1em 0.5em;
+
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#details-buy {
+    display: inline-flex;
+    margin: auto;
+
+    width: 100%;
+}
+
+#add-to-cart {
+    background-color: var(--light);
+    border: solid gray 1px;
+    border-radius: 0.5em;
+    padding: 0.1em 0.5em;
+
+    margin: auto;
+}
+
+.cart-quantity-modifier {
+    margin: 0.2em;
+    margin-bottom: 0em;
+    color: var(--dark);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.details-avg-reviews{
+    width: 90%;
+
+    margin: auto;
+    padding: 1em;
+
+    background: var(--main);
+
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+
+    color: var(--light);
+}
+.avg-reviews{
+    background-color: var(--main);
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+}
+.reviews-stats{
+    
+}
+/* MIN LAYOUT */
+@media (max-width:700px) {
+    #details-container {
+        grid-template-areas:
+            'image'
+            'name'
+            'details'
+            'description';
+        grid-template-columns: 1fr;
+    }
+}
+/* NEW REVIEW */
+#new-review-container {
+    background-color: var(--second);
+
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+
+    margin-top: 1.5em;
+}
+
+/* REVIEWS CONTAINER*/
+#details-reviews {
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+
+    background-color: var(--main);
+
+    border-radius: 1em;
+    border: 0.1em solid var(--dark);
+
+    color: var(--light);
+
+    margin-top: 1.5em;
+}
+
+/* MIN LAYOUT */
+@media (max-width:700px) {
+    #details-container {
+        grid-template-areas:
+            'image'
+            'name'
+            'details'
+            'description';
+        grid-template-columns: 1fr;
+    }
+
+    #details-image,
+    #details-type,
+    #details-title,
+    #details-description {
+        width: 100%;
+        margin: auto;
+    }
+}

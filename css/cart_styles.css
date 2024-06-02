@@ -1,0 +1,201 @@
+.cart-main{
+    width: 100%;
+    display: inline-flex;
+    margin: 0;
+    background-color: var(--second);
+}
+.cart-recept-preview-container {
+    height: 60%;
+    width: 35%;
+    position: sticky;
+    top: 0;
+}
+.cart-itemList-scroll-container{
+    width: 60%;
+    height: 100%;
+}
+.cart-recept-preview-container>.cart-recept-text{
+    padding: 3%;
+    margin: 3%;
+    width: 95%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: var(--light);
+    border: solid var(--dark) 3px;
+}
+.cart-submit-button{
+    padding: 3%;
+    margin: 3%;
+    height: 10%;
+    width: 95%;
+    border-radius: 15px;
+    background-color: var(--main);
+    border: solid var(--dark) 3px;
+    font-weight: bold;
+    color: var(--dark);
+}
+.cart-item{
+    font-size: large;
+    display: inline-flex;
+    height: 150px;
+    width: 95%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--main);
+    border: solid var(--dark) 3px;
+}
+.cart-item-image{
+    max-height: 150px;
+    max-width: 150px;
+    height: 100%;
+    width: auto;
+    border-right: solid 2px var(--second);
+    padding-right: 20px;
+}
+.cart-item-image>img{
+    margin: 2%;
+    padding: 2%;
+    max-height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+.number-item{
+    display: inline-flex;
+    height: 20%;
+    margin: auto;
+    width: 100%;
+}
+.name-item{
+    padding-left: 10px;
+    height: 65%;
+}
+.cart-item-info{
+    border-left: solid, 3px, var(--dark);
+    padding-left: 20px;
+    min-width: 25%;
+}
+.item-errorMessage{
+    color: red;
+    float: right;
+    right: 0;
+    width: 80%;
+    text-align: center;
+}
+.remove-item{
+    text-decoration: none;
+    color: var(--dark);
+    position: absolute;
+    right: 0;
+}
+.cart-item-remove-error{
+    right: 0;
+    width: 50%;
+    position: relative;
+}
+.cart-remove-all-button{
+    background-color: var(--light);
+    color: darkred;
+    padding: 3%;
+    margin: 3%;
+    height: 10%;
+    width: 95%;
+    border-radius: 15px;
+    border: solid var(--dark) 3px;
+    font-weight: bold;
+}
+.cart-recept-text p{
+    color: var(--dark);
+    padding: 3%;
+    margin: 3%;
+    font-weight: bold;
+}
+.cart-empty-msg{
+    color: var(--dark);
+    text-align: center;
+    width: 100%;
+    padding-top: 25%;
+}
+.cart-item-outofstock{
+    opacity: 50%;
+    display: inline-flex;
+    height: 150px;
+    width: 95%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: var(--main);
+}
+.cart-quantity{
+    background-color: var(--light);
+    height: 100%;
+    border-radius: 0.5em;
+    padding: 0.75em 0.5em;
+    text-align: center;
+    width: 55%;
+}
+.item-price{
+    color: var(--dark);
+    font-weight: bold;
+    display: none;
+    visibility: hidden;
+}
+.cart-submit-button:disabled{
+    opacity: 50%;
+}
+
+#item-price{
+    visibility: hidden;
+}
+
+@media (max-width: 700px){
+    .cart-item{
+        margin: 1% auto;
+        width: 100%;
+    }
+    .cart-itemList-scroll-container{
+        width: 100%;
+        margin: auto;
+    }
+    .cart-main{
+        width: 100%;
+        display:block;
+        background-color: var(--second);
+    }
+    .cart-recept-preview-container {
+        height: 20%;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin: auto;
+        padding: auto;
+        display: flex;
+    }
+    .cart-button{
+        display: block;
+        padding: auto;
+        width: 100%;
+        margin: auto;
+    }
+    .cart-recept-preview-container>.cart-recept-text{
+        padding: 3%;
+        width: 95%;
+        height: 70%;
+        border-radius: 5px;
+        background-color: var(--light);
+        border: solid var(--dark) 3px;
+    }
+    .recept{
+        display: none;
+    }
+    .item-price{
+        visibility: visible;
+        display: block;
+    }
+    #item-price{
+        visibility: visible;
+        color: var(--dark);
+        font-weight: bold;
+        text-align: center;
+    }
+}
